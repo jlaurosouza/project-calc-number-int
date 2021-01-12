@@ -59,6 +59,7 @@
     });
 
     function calcResult(){
+        $("#resultSum").hide();
         let number = $("#numberInteger").val();
 
         if(!number || number <= 0){
