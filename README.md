@@ -58,35 +58,5 @@ O último comando serve para testar a instalação, se em localhost:8000 aparece
 $ composer create-project --prefer-dist laravel/laravel nome-do-projeto 8.*
 ```
 
-### Artisan
-- Sistema de comandos do Laravel. Help em:
-```bash
-$ php artisan
-```
-- Remover arquivos de cache criado pelo Laravel:
-```bash
-$ php artisan clear-compiled 
-```
-- Colocar sistema em modo manutenção:
-```bash
-$ php artisan down 
-```
-
-- A ilustração a seguir demonstra o uso do tinker com objetos do tipo Post salvando no banco de dados:
-![Tinker exemplo](public/image/tinker.png)
-
-
-- Para adicionar uma tag 3 ao post 1 pelo tinker basta:
-```bash
-$post = App\Post::find(1);
-$post->tags()->attach(3);
-$post->tags;
-```
-
-- Para "sincronizar" os idsa de tags com um post, pode ser usada a função sync(array()) que realiza o attach e detach das chaves estrangeiras, removendo ids que não conferiram com a lista informada no argumento de sua função:
-```bash
-$post->tags()->sync([1, 3, 5, 7]);
-```
-
 ### Informações importantes
  - Assim que a aplicação é executada no browser, a página do cálculo é exibida.
